@@ -32,7 +32,7 @@ app.use(express.static(__dirname + '/public'));
 //routes===========================================
 
 //configure routes
-require('.app/routes')(app);
+require('./app/routes')(app);
 
 //start app =======================================
 app.listen(port);
