@@ -2,27 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <base href="/">
     <title>Visiting Teaching Tracker</title>
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<nav>
-    <img src="http://lorempixel.com/118/118/nature/Dummy-Text">
-    <h1>Visiting Teaching Coordinator</h1>
-    <ul>
-        <li>login</li>
-        <li>about</li>
-        <li>get started</li>
-    </ul>
-</nav>
+<body ng-app="trackApp" ng-controller="NerdController">
+<div class="container">
+    <nav class="navbar">
+        <div class="navbar-header">
+            <img src="http://lorempixel.com/118/118/nature/Dummy-Text">
+            <h1>Visiting Teaching Coordinator</h1>
+        </div>
+        <div class="navbar-nav">
+            <ul>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/getstarted">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div ng-view>
 
-<footer>
-    <ul>
-        <li>Contact Us</li>
-        <li>Legal</li>
-        <li>FAQ</li>
-        <li>Terms of Service</li>
-        <li>Privacy Policy</li>
-    </ul>
-</footer>
+    </div>
+    <footer>
+        <ul>
+            <li>Contact Us</li>
+            <li>Legal</li>
+            <li>FAQ</li>
+            <li>Terms of Service</li>
+            <li>Privacy Policy</li>
+        </ul>
+    </footer>
+</div>
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-route/angular-route.min.js"></script>
+<!--custom controllers -->
+<script src="js/controllers/mainCtrl.js"></script>
+<script src="js/controllers/nerdCtrl.js"></script>
+<script src="js/services/NerdService.js"></script>
+<script src="js/appRoutes.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
