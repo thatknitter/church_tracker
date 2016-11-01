@@ -1,3 +1,1 @@
-/**
- * Created by kimberlylewis on 11/1/16.
- */
+angular.module('trackApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'NerdCtrl', 'NerdService']);
