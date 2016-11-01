@@ -1,3 +1,3 @@
-/**
- * Created by kimberlylewis on 11/1/16.
- */
+angular.module('MainCtrl', []).controller('MainController', function($scope){
+   $scope.tagline = 'to the moon and back';
+});
