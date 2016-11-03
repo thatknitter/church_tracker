@@ -1,17 +1,22 @@
 //grab first model
-var Nerd = require('./models/nerd');
+var Main = require('./models/main');
 
     module.exports = function(app) {
         //server routes
         //handle api calls
         //authentication routes
 
-        app.get('/api/nerds', function(req, res) {
-           Nerd.find(function (err, nerds) {
+        app.get('/api/main', function(req, res) {
+           Main.find(function(err, mains) {
               if (err)
                 res.send(err);
-               res.json(nerds);
+               res.json(mains);
            });
+        });
+
+        app.use(function(req, res, next){
+           console.log('thing');
+            next();
         });
 
         //app.post goes here

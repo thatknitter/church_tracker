@@ -4,6 +4,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var main = require('./app/models/main');
 
 //configuration===================================
 
@@ -33,7 +34,8 @@ app.use(express.static(__dirname + '/public'));
 
 //configure routes
 require('./app/routes')(app);
-
+//register routes
+app.use('/api', router);
 //start app =======================================
 app.listen(port);
 
