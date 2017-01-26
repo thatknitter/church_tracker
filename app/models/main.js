@@ -12,7 +12,6 @@ var MainSchema = new Schema({
     vtClient1 : String, //join on id to another entry
     vtClient2 : String, //join on id to another entry
     vtClient3 : String, //join on id to another entry
-    username : String,
     password : String
 });
 

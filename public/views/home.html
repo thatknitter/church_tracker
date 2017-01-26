@@ -1,4 +1,16 @@
-<div class="jumbotron text-center">
-    <h1>Visiting Teaching Tracker: Coming Soon</h1>
-    <p>{{ tagline }}</p>
+<div class="login">
+    <h2>Login</h2>
+    <form name="loginForm" ng-submit="login.login()" novalidate>
+        <div class="form-group" ng-class="{'has-error': loginForm.$dirty && !login.email}">
+            <label>Email Address</label>
+            <input class="form-control" type="email" ng-model="login.email" placeholder="email" required>
+        </div>
+        <div class="form-group" ng-class="{'has-error': loginForm.$dirty && !login.password}">
+            <label>Password</label>
+            <input class="form-control" type="password" ng-model="login.password" placeholder="password" required>
+        </div>
+        <input type="submit" value="Login" ng-class="{disabled: loginForm.$invalid}">
+        <button ng-class="{disabled: loginForm.$invalid}" ng-click="login.register()">Register</button>
+        <button ng-class="{disabled: !login.email}" ng-click="login.forgotPassword()">Forgot Password</button>
+    </form>
 </div>
